@@ -56,3 +56,16 @@ function decPhexa() {
     console.log(resultado);
     document.getElementById("resultado").innerHTML = "O resultado é : " + resultado;
 }
+function converterbinariopDec() {
+    let entrada = document.getElementById("1").value;
+    let resultado = binarioPdec(entrada);
+    document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
+  }
+  function binarioPdec(binario) {
+    let lista = binario.split("").map(Number);
+    let resultado = 0;
+    for (let i = lista.length - 1; i >= 0; i--) {
+      resultado += lista[i] * Math.pow(2, lista.length - 1 - i);
+    }
+    return resultado;
+  }
