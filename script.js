@@ -70,13 +70,46 @@ function decPhexa() {
     console.log(resultado);
     document.getElementById("resultado").innerHTML = "O resultado é : " + resultado;
 }
-
+function decPhexa2(x) {
+    x = parseInt(x);
+    let lista = [];
+    while (x > 0) {
+        let a = x % 16;
+        x = Math.floor(x / 16);
+        if (a <= 9) {
+            lista.push(a);
+        } else if (a == 10) {
+            lista.push("a");
+        } else if (a == 11) {
+            lista.push("b");
+        } else if (a == 12) {
+            lista.push("c");
+        } else if (a == 13) {
+            lista.push("d");
+        } else if (a == 14) {
+            lista.push("e");
+        } else if (a == 15) {
+            lista.push("f");
+        }
+    }
+    lista.reverse();
+    let resultado = lista.join("");
+    return(resultado);
+}
 
 function converterbinariopDec() {
     let entrada = document.getElementById("1").value;
+    
+    // Verifica se a entrada contém apenas 0s e 1s
+    if (!/^[01]+$/.test(entrada)) {
+      alert("Por favor, insira apenas 0s e 1s.");
+      return;
+    }
+    
     let resultado = binarioPdec(entrada);
     document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
   }
+  
   function binarioPdec(binario) {
     let lista = binario.split("").map(Number);
     let resultado = 0;
@@ -100,9 +133,17 @@ function converterbinariopDec() {
     return resultado;
   }
 
-  function converteroctalPbinari() {
+  function converterOctalpHexa() {
     let entrada = document.getElementById("1").value;
     let x = octalPdec(entrada);
-    let resultado = decPbinario2(x)
+    let resultado = decPhexa2(x);
     document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
 }
+function converteroctalPbinari() {
+    let entrada = document.getElementById("1").value;
+    let x = octalPdec(entrada);
+    let resultado = decPbinario2(x);
+    document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
+}
+
+
