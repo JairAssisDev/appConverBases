@@ -13,6 +13,20 @@ function decPbinario() {
     document.getElementById("resultado").innerHTML = "O resultado é : " + resultado;
   }
 
+  function decPbinario(x) {
+    x = parseInt(x);
+    let lista = [];
+    while (x > 0) {
+      let a = x % 2;
+      x = Math.floor(x / 2);
+      lista.push(a);
+    }
+    lista.reverse();
+    let resultado = lista.join("");
+    resultado = resultado.padStart(4, "0");
+    return resultado
+}
+
 function decPoctal() {
     let x = document.getElementById("1").value
     x = parseInt(x);
@@ -83,3 +97,10 @@ function converterbinariopDec() {
     }
     return resultado;
   }
+
+  function converteroctalPbinari() {
+    let entrada = document.getElementById("1").value;
+    let x = octalPdec(entrada);
+    let resultado = decPbinario2(x)
+    document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
+}
