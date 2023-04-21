@@ -16,10 +16,27 @@
 <body>
 
     <div class="caixa-maior">
+        <h2 class="opcaoSelect"> Selecione uma opção</h2>
+        <br>
+        <h2 class="opcaoMenu">
+            1 - Decimal para Binário
+            2 - Decimal para Octal<br>
+            3 - Decimal para Hexadecimal
+            4 - Octal para Binário<br>
+            5 - Octal para Decimal
+            6 - Octal para Hexadecimal<br>
+            7 - Hexadecimal para binário
+            8 - Hexadecimal para decimal<br>
+            9 - Hexadecimal para octal<br>
+            10 - Decimal fração para binário fração<br>
+            11 - Binário fração para decimal fração<br>
+
+        </h2>
+        <br>
         <ul>
-            <button class="botao-selection" onclick="decPhexa()">decPhexa</button>
-            <button class="botao-selection" onclick="selectButton(this)">2</button>
-            <button class="botao-selection" onclick="selectButton(this)">3</button>
+            <button class="botao-selection" onclick="decPbinario()">1</button>
+            <button class="botao-selection" onclick="decPoctal()">2</button>
+            <button class="botao-selection" onclick="decPhexa()">3</button>
             <button class="botao-selection" onclick="selectButton(this)">4</button>
             <button class="botao-selection" onclick="selectButton(this)">5</button>
             <button class="botao-selection" onclick="selectButton(this)">6</button>
@@ -29,48 +46,14 @@
             <button class="botao-selection" onclick="selectButton(this)">10</button>
             <button class="botao-selection" onclick="selectButton(this)">11</button>
         </ul>
-        <br>
-        <h2 class="opcaoSelect">Opção selecionada</h2>
-        <br>
-        <input class="input-numero" id="1" placeholder="Dingite ">
-        <button class="botao-Calc" onclick="cliqueNoBotao()" type="button"> Calcular
-        </button>
+
+
+
         <div class="caixa-media">
-            <h2 class="resultado"id="resultado">Seu resutado</h2>
+            <input class="input-numero" id="1" placeholder="Digite ">
+            <h2 class="resultado" id="resultado">&nbsp &nbsp &nbsp Seu resutado</h2>
 
         </div>
-        <script>
-            function decPhexa() {
-                let x = document.getElementById("1").value
-                x = parseInt(x);
-                let lista = [];
-                while (x > 0) {
-                    let a = x % 16;
-                    x = Math.floor(x / 16);
-                    if (a <= 9) {
-                        lista.push(a);
-                    } else if (a == 10) {
-                        lista.push("a");
-                    } else if (a == 11) {
-                        lista.push("b");
-                    } else if (a == 12) {
-                        lista.push("c");
-                    } else if (a == 13) {
-                        lista.push("d");
-                    } else if (a == 14) {
-                        lista.push("e");
-                    } else if (a == 15) {
-                        lista.push("f");
-                    }
-                }
-                lista.reverse();
-                let resultado = lista.join('');
-                console.log(resultado) ;
-                document.getElementById("resultado").innerHTML="O resultado é : "+resultado;
-            }
-
-
-        </script>
 
 </body>
 
