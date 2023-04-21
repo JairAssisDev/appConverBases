@@ -31,8 +31,15 @@ body {
     font-size: 18px;
     font-weight: 300;
     text-align: justify;
+    
 }
-
+.listaitens{    
+    margin: 10px;
+    margin-left: 105px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
 .input-numero {
     border: none;
     outline: none;

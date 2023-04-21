@@ -13,7 +13,7 @@ function decPbinario() {
     document.getElementById("resultado").innerHTML = "O resultado é : " + resultado;
   }
 
-  function decPbinario(x) {
+  function decPbinario2(x) {
     x = parseInt(x);
     let lista = [];
     while (x > 0) {
@@ -70,6 +70,8 @@ function decPhexa() {
     console.log(resultado);
     document.getElementById("resultado").innerHTML = "O resultado é : " + resultado;
 }
+
+
 function converterbinariopDec() {
     let entrada = document.getElementById("1").value;
     let resultado = binarioPdec(entrada);
