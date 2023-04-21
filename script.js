@@ -69,3 +69,17 @@ function converterbinariopDec() {
     }
     return resultado;
   }
+
+  function converteroctalPdec() {
+    let entrada = document.getElementById("1").value;
+    let resultado = octalPdec(entrada);
+    document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
+  }
+  function octalPdec(octal) {
+    let lista = octal.split("").map(Number);
+    let resultado = 0;
+    for (let i = lista.length - 1; i >= 0; i--) {
+      resultado += lista[i] * Math.pow(8, lista.length - 1 - i);
+    }
+    return resultado;
+  }
