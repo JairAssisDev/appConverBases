@@ -146,4 +146,41 @@ function converteroctalPbinari() {
     document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
 }
 
-
+function converterbinariopOctal() {
+    let entrada = document.getElementById("1").value;
+    
+    // Verifica se a entrada contém apenas 0s e 1s
+    if (!/^[01]+$/.test(entrada)) {
+      alert("Por favor, insira apenas 0s e 1s.");
+      return;
+    }
+    
+    let x = binarioPdec(entrada);
+    let resultado = decPoctal2(x);
+    document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
+  }
+  function decPoctal2(x) {
+    x = parseInt(x);
+    let lista = [];
+    while (x > 0) {
+    let a = x % 8;
+    x = Math.floor(x / 8);
+    lista.push(a);
+    }
+    lista.reverse();
+    let resultado = lista.join('');
+    return resultado;
+}
+function converterBinariopHexa() {
+    let entrada = document.getElementById("1").value;
+    
+    // Verifica se a entrada contém apenas 0s e 1s
+    if (!/^[01]+$/.test(entrada)) {
+      alert("Por favor, insira apenas 0s e 1s.");
+      return;
+    }
+    
+    let x = binarioPdec(entrada);
+    let resultado = decPhexa2(x);
+    document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
+  }
