@@ -21,7 +21,11 @@ body {
     width: 95%;
     max-width: 600px;
 }
-
+.opcaoSelect{
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 300;
+}
 .input-numero {
     border: none;
     outline: none;
@@ -154,7 +158,8 @@ body {
 .caixa-media{
     margin-top: 30px;
 }
-.cidade{
+
+.resultado{
     color: #ffffff;
     font-size: 30px;
     font-weight: 300;
