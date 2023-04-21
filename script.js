@@ -184,3 +184,47 @@ function converterBinariopHexa() {
     let resultado = decPhexa2(x);
     document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
   }
+
+  function hexaPdec() {
+    let x = document.getElementById("1").value
+    x = parseInt(x);
+    let lista = [];
+    let resultado = [];
+  
+    for (let caractere of x) {
+      if (/[0-9]/.test(caractere)) {
+        lista.push(parseInt(caractere));
+      } else {
+        lista.push(caractere);
+      }
+    }
+  
+    for (let i = 0; i < lista.length; i++) {
+      if (lista[i] === "a" || lista[i] === "A") {
+        lista[i] = 10;
+      } else if (lista[i] === "b" || lista[i] === "B") {
+        lista[i] = 11;
+      } else if (lista[i] === "c" || lista[i] === "C") {
+        lista[i] = 12;
+      } else if (lista[i] === "d" || lista[i] === "D") {
+        lista[i] = 13;
+      } else if (lista[i] === "e" || lista[i] === "E") {
+        lista[i] = 14;
+      } else if (lista[i] === "f" || lista[i] === "F") {
+        lista[i] = 15;
+      }
+    }
+  
+    let a = 0;
+  
+    for (let g = lista.length - 1; g >= 0; g--) {
+      let item = lista[a];
+      a++;
+      let y = Math.pow(16, g);
+      let valor = item * y;
+      resultado.push(valor);
+    }
+    resultado.reduce((acumulador, valorAtual) => acumulador + valorAtual);
+    document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
+}
+  
