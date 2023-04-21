@@ -14,10 +14,10 @@
 </head>
 
 <body>
- 
+
     <div class="caixa-maior">
         <ul>
-            <button class="botao-selection" onclick="selectButton(this)">1</button>
+            <button class="botao-selection" onclick="decPhexa()">decPhexa</button>
             <button class="botao-selection" onclick="selectButton(this)">2</button>
             <button class="botao-selection" onclick="selectButton(this)">3</button>
             <button class="botao-selection" onclick="selectButton(this)">4</button>
@@ -32,13 +32,45 @@
         <br>
         <h2 class="opcaoSelect">Opção selecionada</h2>
         <br>
-        <input class="input-numero" placeholder="Dingite ">
+        <input class="input-numero" id="1" placeholder="Dingite ">
         <button class="botao-Calc" onclick="cliqueNoBotao()" type="button"> Calcular
         </button>
         <div class="caixa-media">
-            <h2 class="resultado">Seu resutado</h2>
+            <h2 class="resultado"id="resultado">Seu resutado</h2>
 
         </div>
+        <script>
+            function decPhexa() {
+                let x = document.getElementById("1").value
+                x = parseInt(x);
+                let lista = [];
+                while (x > 0) {
+                    let a = x % 16;
+                    x = Math.floor(x / 16);
+                    if (a <= 9) {
+                        lista.push(a);
+                    } else if (a == 10) {
+                        lista.push("a");
+                    } else if (a == 11) {
+                        lista.push("b");
+                    } else if (a == 12) {
+                        lista.push("c");
+                    } else if (a == 13) {
+                        lista.push("d");
+                    } else if (a == 14) {
+                        lista.push("e");
+                    } else if (a == 15) {
+                        lista.push("f");
+                    }
+                }
+                lista.reverse();
+                let resultado = lista.join('');
+                console.log(resultado) ;
+                document.getElementById("resultado").innerHTML="O resultado é : "+resultado;
+            }
+
+
+        </script>
 
 </body>
 
