@@ -284,7 +284,6 @@ function converterBinariopHexa() {
   
       function converterHexapOctal() {
         let entrada = document.getElementById("1").value;
-        
         // Verifica se a entrada contém apenas 0s e 1s
         if (!/^[0-9a-fA-F]+$/.test(entrada)) {
           alert("Por favor, insira apenas números e letras de a a f (em minúsculas ou maiúsculas).");
