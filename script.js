@@ -187,9 +187,8 @@ function converterBinariopHexa() {
 
   function hexaPdec() {
     let x = document.getElementById("1").value
-    x = parseInt(x);
     let lista = [];
-    let resultado = [];
+    let resultadoArray = [];
   
     for (let caractere of x) {
       if (/[0-9]/.test(caractere)) {
@@ -222,9 +221,10 @@ function converterBinariopHexa() {
       a++;
       let y = Math.pow(16, g);
       let valor = item * y;
-      resultado.push(valor);
+      resultadoArray.push(valor);
     }
-    resultado.reduce((acumulador, valorAtual) => acumulador + valorAtual);
+    let resultado = resultadoArray.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
     document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
-}
+    }
+  
   
