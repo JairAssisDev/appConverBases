@@ -38,7 +38,6 @@ function decPoctal() {
   }
   lista.reverse();
   let resultado = lista.join('');
-  console.log(resultado);
   document.getElementById("resultado").innerHTML = "O resultado é : " + resultado;
 }
 
@@ -67,7 +66,6 @@ function decPhexa() {
   }
   lista.reverse();
   let resultado = lista.join("");
-  console.log(resultado);
   document.getElementById("resultado").innerHTML = "O resultado é : " + resultado;
 }
 function decPhexa2(x) {
