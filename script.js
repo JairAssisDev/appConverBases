@@ -294,3 +294,16 @@ function converterBinariopHexa() {
         let resultado = decPoctal2(x);
         document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
       }
+
+      function binariofrapradecfra() {
+        let entrada = document.getElementById("1").value.replace(",", ".");
+        let [intPart, fracPart] = entrada.split(".");
+        let intDecimal = parseInt(intPart, 2);
+        let fracDecimal = 0;
+        for (let i = 0; i < fracPart.length; i++) {
+          fracDecimal += parseInt(fracPart[i]) * Math.pow(2, -(i + 1));
+        }
+        let resultado = intDecimal + fracDecimal;
+        document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
+      }
+      
