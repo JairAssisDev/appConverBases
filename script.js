@@ -99,11 +99,11 @@ function converterbinariopDec() {
   let entrada = document.getElementById("1").value;
 
   // Verifica se a entrada contém apenas 0s e 1s
-  if (!/^[01]+$/.test(entrada)) {
+  if (!/^[01]+$/.test(entrada) ) {
     alert("Por favor, insira apenas 0s e 1s.");
     return;
   }
-
+//teste
   let resultado = binarioPdec(entrada);
   document.getElementById("resultado").innerHTML = "O resultado é: " + resultado;
 }
