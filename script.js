@@ -26,7 +26,6 @@ function decPbinario2(x) {
   resultado = resultado.padStart(4, "0");
   return resultado
 }
-
 function decPoctal() {
   let x = document.getElementById("1").value
   x = parseInt(x);
@@ -40,7 +39,6 @@ function decPoctal() {
   let resultado = lista.join('');
   document.getElementById("resultado").innerHTML = "O resultado é : " + resultado;
 }
-
 function decPhexa() {
   let x = document.getElementById("1").value
   x = parseInt(x);
@@ -334,8 +332,8 @@ function decimalParaBinario(decimal) {
   return (decimal >>> 0).toString(2);
 }
 console.log("Obrigado por participar S2");
-console.log("   _/﹋\\_");
-console.log("   (҂`_´)");
-console.log("   <,︻╦╤─");
-console.log("  _/﹋\\_");
-console.log(" SR.JAIR.ASSIS.DEV");
+console.log("   _/﹋\\_ ");
+console.log("   (҂`_´) ");
+console.log("   <,︻╦╤─ ");
+console.log("  _/﹋\\_ ");
+console.log(" SR.JAIR.ASSIS.DEV ");
